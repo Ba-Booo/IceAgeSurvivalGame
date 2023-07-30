@@ -5,7 +5,8 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
 
-    public Transform Target;
+    public Transform target;
+    public float cameraMoveSpeed;
 
     void Start()
     {
@@ -14,6 +15,7 @@ public class CameraMove : MonoBehaviour
 
     void LateUpdate()
     {
-        transform.position = new Vector3(Target.position.x, 0, -10);
+        transform.position = Vector3.Lerp(transform.position, target.position, cameraMoveSpeed * Time.deltaTime);       //부드러운 이동
+        transform.position = new Vector3(transform.position.x, 0, -10);
     }
 }
