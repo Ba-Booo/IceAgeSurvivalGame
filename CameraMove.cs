@@ -10,7 +10,12 @@ public class CameraMove : MonoBehaviour
 
     void Start()
     {
-        
+
+    }
+
+    void Update()
+    {
+        Cursor.visible = false;
     }
 
     void LateUpdate()
