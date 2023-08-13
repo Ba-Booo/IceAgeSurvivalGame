@@ -10,12 +10,7 @@ public class CameraMove : MonoBehaviour
 
     void Start()
     {
-
-    }
-
-    void Update()
-    {
-        Cursor.visible = false;
+        Cursor.lockState= CursorLockMode.Locked;        //마우스커서 가리기
     }
 
     void LateUpdate()
